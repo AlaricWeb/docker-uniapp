@@ -1,6 +1,14 @@
 <script>
+import axios from "axios"
+
 export default {
   onLaunch: function () {
+    axios.get("https://dog.ceo/api/breeds/image/random").then(res=>{
+       console.log(res);
+    }).catch((err)=>{
+      console.log(err);
+    })
+
     console.log('App Launch')
   },
   onShow: function () {

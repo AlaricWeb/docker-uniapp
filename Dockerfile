@@ -4,7 +4,12 @@ COPY ./ /app
 
 WORKDIR /app
 
-# RUN  npm install 
+RUN  npm install 
 
 EXPOSE 5173
 
+VOLUME [ "/app/dist" ]
+
+ENTRYPOINT [ "npm","run" ]
+
+CMD [ "dev:h5"]

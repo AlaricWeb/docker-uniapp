@@ -10,6 +10,5 @@ EXPOSE 5173
 
 VOLUME [ "/app/dist" ]
 
-ENTRYPOINT [ "npm" ]
 
-CMD [ "dev:h5"]
+CMD ["npm","run", "dev:h5"]
